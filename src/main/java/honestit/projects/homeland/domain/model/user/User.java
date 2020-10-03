@@ -17,7 +17,8 @@ import java.util.Set;
 @EqualsAndHashCode(of = "username", callSuper = false)
 public class User extends BaseEntity {
 
-    public User() { }
+    public User() {
+    }
 
     public User(String username, String password) {
         this.username = username;

@@ -4,7 +4,7 @@
         parameters = {
             @org.hibernate.annotations.Parameter(
                     name = "sequence-name",
-                    value = "entities_sequences"
+                    value = "entities_sequence"
             )
         }
 )
