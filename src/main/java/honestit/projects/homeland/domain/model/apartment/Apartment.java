@@ -27,12 +27,13 @@ public class Apartment extends BaseEntity {
     }
 
     @Column(nullable = false)
-    private String name;
+    protected String name;
 
     @AttributeOverride(
-            name = "description", column = @Column(table = "apartment_details")
+            name = "description",
+            column = @Column(table = "apartment_details")
     )
-    private ApartmentDetails apartmentDetails = new ApartmentDetails();
+    protected ApartmentDetails apartmentDetails = new ApartmentDetails();
 
     @AttributeOverrides({
             @AttributeOverride(
@@ -52,7 +53,7 @@ public class Apartment extends BaseEntity {
                     column = @Column(name = "apartment_city", nullable = false)
             )
     })
-    private Address address = new Address();
+    protected Address address = new Address();
 
     @ManyToMany
     @JoinTable(name = "apartment_owners",
@@ -62,10 +63,10 @@ public class Apartment extends BaseEntity {
             },
             joinColumns = @JoinColumn(name = "apartment_id", referencedColumnName = "id")
     )
-    private Set<User> owners = new HashSet<>();
+    protected Set<User> owners = new HashSet<>();
 
     @CollectionTable(name = "apartment_rooms")
     @ElementCollection
-    private Set<Room> rooms = new HashSet<>();
+    protected Set<Room> rooms = new HashSet<>();
 
 }

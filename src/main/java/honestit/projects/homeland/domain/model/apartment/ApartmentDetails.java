@@ -11,5 +11,5 @@ import java.io.Serializable;
 @Data @AllArgsConstructor @NoArgsConstructor
 public class ApartmentDetails implements Serializable {
 
-    private String description;
+    protected String description;
 }

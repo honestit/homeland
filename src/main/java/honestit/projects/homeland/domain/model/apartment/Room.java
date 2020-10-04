@@ -9,12 +9,12 @@ import java.io.Serializable;
 public class Room implements Serializable {
 
     @Column(nullable = false)
-    private String name;
+    protected String name;
     @Column(nullable = false, scale = 5, precision = 2)
-    private Double area;
+    protected Double area;
     @Column(scale = 5, precision = 2)
-    private Double circuit;
+    protected Double circuit;
     @Column(scale = 5, precision = 2)
-    private Double height;
+    protected Double height;
 
 }

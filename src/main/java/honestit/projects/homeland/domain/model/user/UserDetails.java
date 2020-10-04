@@ -13,9 +13,9 @@ import java.io.Serializable;
 public class UserDetails implements Serializable {
 
     @Column(name = "first_name")
-    private String firstName;
+    protected String firstName;
     @Column(name = "last_name")
-    private String lastName;
+    protected String lastName;
     @Column(unique = true)
-    private String email;
+    protected String email;
 }

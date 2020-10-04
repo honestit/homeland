@@ -36,6 +36,7 @@ public class User extends BaseEntity {
     @ElementCollection
     protected Set<String> roles = new HashSet<>();
 
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
     protected UserDetails details = new UserDetails();
 
 }

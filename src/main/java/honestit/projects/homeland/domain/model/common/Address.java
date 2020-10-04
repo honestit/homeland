@@ -10,8 +10,8 @@ import java.io.Serializable;
 @NoArgsConstructor @AllArgsConstructor
 public class Address implements Serializable {
 
-    private String houseNumber;
-    private String street;
-    private String postCode;
-    private String city;
+    protected String houseNumber;
+    protected String street;
+    protected String postCode;
+    protected String city;
 }
