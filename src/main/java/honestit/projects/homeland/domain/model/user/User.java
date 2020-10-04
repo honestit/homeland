@@ -1,6 +1,7 @@
 package honestit.projects.homeland.domain.model.user;
 
 import honestit.projects.homeland.domain.model.base.BaseEntity;
+import honestit.projects.homeland.domain.model.common.DbFile;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -37,5 +38,12 @@ public class User extends BaseEntity {
     protected Set<String> roles = new HashSet<>();
 
     protected UserDetails details = new UserDetails();
+
+    @OneToMany
+    @JoinTable(name = "users_avatars")
+    protected Set<DbFile> avatars;
+
+    @OneToOne
+    protected DbFile avatar;
 
 }
